@@ -7,7 +7,7 @@
           : '维护通知: ') + maintenances[0].name
       "
       type="warning"
-      :bordered="bordered"
+      :bordered="true"
       :closable="true"
     >
       {{ maintenances[0].content }}
@@ -28,36 +28,29 @@
 </template>
 
 <script setup>
-  import { ref, onMounted, onUnmounted } from 'vue'
-  import { NAlert } from 'naive-ui'
-  import http from '../plugins/http.js'
+import { ref, onMounted, onUnmounted } from 'vue'
+import { NAlert } from 'naive-ui'
+import http from '../plugins/http.js'
 
-  const maintenances = ref([])
-  const bordered = ref(false)
+const maintenances = ref([])
 
-  let interval = null
-  let refresh_interval = null
+let refresh_interval = null
 
-  function refresh() {
-    http.get('maintenances').then((res) => {
-      maintenances.value = res.data
-    })
-  }
+function refresh() {
+  http.get('maintenances').then((res) => {
+    maintenances.value = res.data
+  })
+}
 
-  onMounted(() => {
+onMounted(() => {
+  refresh()
+
+  refresh_interval = setInterval(() => {
     refresh()
+  }, 10000)
+})
 
-    refresh_interval = setInterval(() => {
-      refresh()
-    }, 10000)
-
-    interval = setInterval(() => {
-      bordered.value = !bordered.value
-    }, 1000)
-  })
-
-  onUnmounted(() => {
-    interval && clearInterval(interval)
-    refresh_interval && clearInterval(refresh_interval)
-  })
+onUnmounted(() => {
+  refresh_interval && clearInterval(refresh_interval)
+})
 </script>

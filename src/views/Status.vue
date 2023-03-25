@@ -55,13 +55,13 @@
       </n-tab-pane>
       <n-tab-pane v-for="module in modules" :key="module.id" :name="module.id" :tab="module.name">
         <n-table v-if="servers[module.id].length">
-          <thead>
+          <thead class="text-center">
           <tr>
             <th>名称</th>
             <th>状态</th>
           </tr>
           </thead>
-          <tbody>
+          <tbody class="text-center">
           <tr>
             <td>
               {{ module.name }}
@@ -85,13 +85,22 @@
             </td>
             <td>
               <n-text v-if="server.status === 'up'" type="success">
+                <n-icon size="20">
+                  <checkmark-circle-outline style="margin-top: 5px"/>
+                </n-icon>&nbsp;
                 正常
               </n-text>
               <n-text v-else-if="server.status === 'maintenance'" type="warning">
+                <n-icon size="20">
+                  <close-circle-outline style="margin-top: 5px"/>
+                </n-icon>&nbsp;
                 维护中
               </n-text>
               <n-text v-else type="error">
-                失败
+                <n-icon size="20">
+                  <close-circle-outline style="margin-top: 5px"/>
+                </n-icon>&nbsp;
+                异常
               </n-text>
             </td>
           </tr>
@@ -111,6 +120,7 @@ import {onUnmounted, ref} from "vue"
 import {NEmpty, NH1, NTable, NTabPane, NTabs, NText} from "naive-ui"
 import http from '../plugins/http'
 import IndexLayout from "../components/menus/IndexLayout.vue";
+import {CloseCircleOutline, CheckmarkCircleOutline} from '@vicons/ionicons5'
 
 const modules = ref([])
 const nodes = ref([
@@ -127,8 +137,12 @@ const servers = ref({
 })
 
 function refreshModules() {
-  http.get('modules').then(res => {
-    modules.value = res.data
+  http.get('/modules').then(res => {
+    for (let i = 0; i < res.data.length; i++) {
+      if (res.data[i].id === "frp") {
+        modules.value.push(res.data[i])
+      }
+    }
     servers.value[res.data[0].id] = {}
   })
 }
