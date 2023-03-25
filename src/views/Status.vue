@@ -117,10 +117,10 @@
 
 <script setup>
 import {onUnmounted, ref} from "vue"
-import {NEmpty, NH1, NTable, NTabPane, NTabs, NText} from "naive-ui"
+import {NEmpty, NH1, NIcon, NTable, NTabPane, NTabs, NText} from "naive-ui"
 import http from '../plugins/http'
 import IndexLayout from "../components/menus/IndexLayout.vue";
-import {CloseCircleOutline, CheckmarkCircleOutline} from '@vicons/ionicons5'
+import {CheckmarkCircleOutline, CloseCircleOutline} from '@vicons/ionicons5'
 
 const modules = ref([])
 const nodes = ref([

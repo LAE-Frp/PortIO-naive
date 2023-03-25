@@ -18,9 +18,8 @@
 </template>
 
 <script setup>
-import {NButton, NH1, NInput, useOsTheme} from 'naive-ui'
+import {NButton, NH1, useOsTheme} from 'naive-ui'
 import {computed, ref} from "vue";
-import http from '../../plugins/http'
 import userStore from '../../plugins/stores/user'
 import router from "../../plugins/router.js";
 
