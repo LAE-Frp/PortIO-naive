@@ -14,6 +14,7 @@
             <div v-if="loginUrl">
               <n-p>使用移动设备扫码登录</n-p>
               <QRCodeVue3
+                  class="ml-3"
                   :backgroundOptions="qrOptions.backgroundOptions"
                   :backgroundOptionsHelper="qrOptions.backgroundOptionsHelper"
                   :cornersDotOptions="qrOptions.cornersDotOptions"
