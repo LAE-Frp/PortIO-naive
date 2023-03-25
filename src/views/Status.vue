@@ -68,12 +68,21 @@
             </td>
             <td>
               <n-text v-if="module.status === 'up'" type="success">
+                <n-icon size="20">
+                  <checkmark-circle-outline style="margin-top: 5px"/>
+                </n-icon>&nbsp;
                 正常
               </n-text>
               <n-text v-else-if="module.status === 'down'" type="error">
+                <n-icon size="20">
+                  <close-circle-outline style="margin-top: 5px"/>
+                </n-icon>&nbsp;
                 离线
               </n-text>
               <n-text v-else depth="3">
+                <n-icon size="20">
+                  <close-circle-outline style="margin-top: 5px"/>
+                </n-icon>&nbsp;
                 维护
               </n-text>
             </td>
