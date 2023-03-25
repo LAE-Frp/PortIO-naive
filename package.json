@@ -33,11 +33,7 @@
     "vue": "^3.2.45",
     "vue-axios": "^3.5.2",
     "vue-router": "^4.0.13",
-    "vuex": "^4.0.2",
-    "xterm": "^5.1.0",
-    "xterm-addon-fit": "^0.7.0",
-    "xterm-addon-search": "^0.11.0",
-    "xterm-addon-search-bar": "^0.2.0"
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
