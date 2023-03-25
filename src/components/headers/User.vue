@@ -49,13 +49,6 @@
       </div>
 
       <div class="mt-5">
-        <n-h2 class="all-zero">计费项目列表</n-h2>
-        <n-a>
-          <router-link :to="{ name: 'hosts' }" class="link">主机</router-link>
-        </n-a>
-      </div>
-
-      <div class="mt-5">
         <n-h2 class="all-zero">服务与支持</n-h2>
         <n-a>
           <router-link :to="{ name: 'work-orders' }" class="link">
