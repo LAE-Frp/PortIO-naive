@@ -9,7 +9,7 @@
       <div v-else-if="state === 'logging'">
         <div class="text-center">
           <div v-if="url">
-            <n-h2>登录 莱云</n-h2>
+            <n-h2>登录 联合映射</n-h2>
 
             <div v-if="loginUrl">
               <n-p>使用移动设备扫码登录</n-p>
@@ -268,7 +268,7 @@ function toLogin() {
 
   axios
       .post(api.auth + '/public/auth_request', {
-        description: '莱云仪表盘',
+        description: 'PortIO 仪表盘',
         require_token: true,
         abilities: ['*'],
         return_url: window.location.href,

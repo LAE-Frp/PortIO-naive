@@ -63,7 +63,7 @@ function login() {
   axios.post(api.auth + '/api/auth', form.value).then(res => {
     if (res.status === 201) {
       dialog.success({
-        title: '欢迎加入莱云。',
+        title: '欢迎加入联合映射。',
         content: '您的账号已经创建成功。请到您的邮箱中验证您的邮箱地址。'
       })
     } else if (res.status === 200) {
