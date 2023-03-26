@@ -84,6 +84,7 @@ hljs.registerLanguage('ini', ini)
  * js 文件下使用这个做类型提示
  * @type import('naive-ui').GlobalThemeOverrides
  */
+
 // const themeOverrides = {
 //   common: {
 //     primaryColor: '#ec4b2d',
@@ -92,7 +93,6 @@ hljs.registerLanguage('ini', ini)
 //   Button: {
 //     textColor: '#ec4b2d'
 //   },
-//
 // }
 
 const themeOverrides = {}

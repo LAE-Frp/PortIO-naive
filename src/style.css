@@ -95,6 +95,10 @@ body {
     .v-md-textarea-editor textarea {
         color: #cacaca !important;
     }
-
-
 }
+
+/*
+html {
+    filter: grayscale(1);
+}
+*/
