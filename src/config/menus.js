@@ -1,4 +1,4 @@
-import {CloudOutline} from "@vicons/ionicons5";
+import {CloudOutline, SettingsOutline} from "@vicons/ionicons5";
 import {addMenuOptions} from "../plugins/menuOptions";
 
 
@@ -8,6 +8,12 @@ const modules = [
         name: "PortIO",
         route: "modules.tunnels.index",
         icon: CloudOutline
+    },
+    {
+        id: "settings",
+        name: "设置",
+        route: "settings",
+        icon: SettingsOutline
     },
 ]
 

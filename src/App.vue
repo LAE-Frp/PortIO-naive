@@ -44,6 +44,8 @@ import ini from 'highlight.js/lib/languages/ini'
 
 import LayoutVue from './components/Layout.vue'
 
+import app from './plugins/stores/app.js'
+
 import {
   darkTheme,
   dateZhCN,
@@ -95,7 +97,15 @@ hljs.registerLanguage('ini', ini)
 //   },
 // }
 
-const themeOverrides = {}
+const themeOverrides = {
+    common: {
+      primaryColor: app.state.theme_color,
+      primaryColorHover: app.state.theme_color,
+    },
+    Button: {
+      textColor: app.state.theme_color
+    },
+}
 
 
 </script>

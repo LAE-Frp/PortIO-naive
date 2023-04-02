@@ -8,10 +8,10 @@
 
             <n-form :model="form">
               <n-form-item label="邮箱" prop="email">
-                <n-input v-model:value="form.email" placeholder="您的邮箱"/>
+                <n-input v-model:value="form.email" placeholder="您的邮箱" @keyup.enter="login"/>
               </n-form-item>
               <n-form-item label="密码" prop="password">
-                <n-input v-model:value="form.password" placeholder="您的密码" type="password"/>
+                <n-input v-model:value="form.password" placeholder="您的密码" type="password" @keyup.enter="login"/>
               </n-form-item>
               <n-form-item>
                 <div>

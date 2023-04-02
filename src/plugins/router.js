@@ -59,6 +59,15 @@ const routes = [
             auth: false,
         },
     },
+    {
+        path: '/settings',
+        name: 'settings',
+        component: () => import('../views/Settings.vue'),
+        meta: {
+            title: '设置',
+            auth: true,
+        },
+    },
     // Modules
     {
         path: '/modules',
