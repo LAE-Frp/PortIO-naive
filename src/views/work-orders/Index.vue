@@ -1,7 +1,7 @@
 <template>
   <IndexLayout>
     <n-h1 prefix="bar">
-      <n-text type="success">
+      <n-text type="primary">
         工单
       </n-text>
     </n-h1>

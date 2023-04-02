@@ -21,7 +21,7 @@
           <div v-if="loaded">
             <div>
               <n-h2 prefix="bar">
-                <n-text type="success">
+                <n-text type="primary">
                   {{ workOrder.title }}
                 </n-text>
               </n-h2>
@@ -36,7 +36,7 @@
             <div v-if="replies.length" class="mt-3">
               <!-- replies -->
               <n-h3 prefix="bar">
-                <n-text type="success">
+                <n-text type="primary">
                   对话记录
                 </n-text>
               </n-h3>
@@ -73,7 +73,7 @@
 
             <div v-if="!token" class="mt-5">
               <n-h3 prefix="bar">
-                <n-text type="success">
+                <n-text type="primary">
                   您的称呼
                 </n-text>
               </n-h3>
@@ -83,7 +83,7 @@
 
             <div class="mt-3">
               <n-h3 prefix="bar">
-                <n-text type="success">
+                <n-text type="primary">
                   回复
                 </n-text>
               </n-h3>

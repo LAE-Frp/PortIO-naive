@@ -10,7 +10,7 @@
     <div v-if="!sending">
       <div v-show="!(workOrder.host_id !== null || workOrder.module_id !== null)">
         <n-h2 prefix="bar">
-          <n-text type="success">
+          <n-text type="primary">
             有什么我们能帮助您的吗？
           </n-text>
         </n-h2>
